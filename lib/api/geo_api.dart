@@ -13,7 +13,7 @@ Future<List<Address>> fetchAddresses() async {
   const url = 'https://elm.cangdu.org/v1/pois?city_id=846&keyword=%E6%96%B0%E6%A1%A5&type=search';
   try {
     var res = await http.get(url);
-    print('xxxxxx');
+    print('http get ok');
     return compute(parseAddresses, res.body);
   } catch (e) {
     throw e;
